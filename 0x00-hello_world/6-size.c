@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * msin -Entry point
  *
  * Return: Always 0 (Success)
