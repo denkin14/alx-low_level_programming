@@ -10,9 +10,9 @@ int main(void)
 {
 int d;
 
-for(d = 0; d < 26; ++d)
+for (d = 0; d < 26; ++d)
 putchar('a' + d);
-for(d = 0; d < 26; ++d)
+for (d = 0; d < 26; ++d)
 putchar('A' + d);
 
 putchar('\n');
