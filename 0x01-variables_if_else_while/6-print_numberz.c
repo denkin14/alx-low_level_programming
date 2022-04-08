@@ -4,7 +4,6 @@
  * main - entry point
  *
  * Description: Print no 0 to 9 on new line
- * i
  * Return: 0
  */
 int main(void)
@@ -17,4 +16,4 @@ putchar('0' + d);
 putchar('\n');
 
 return (0);
-}	
+}
