@@ -9,7 +9,7 @@ int main(void)
 int d;
 
 for (d = 0; d < 26; ++d)
-putchar('a' + c);
+putchar('a' + d);
 
 putchar('\n');
 
