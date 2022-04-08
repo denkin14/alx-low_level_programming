@@ -6,7 +6,7 @@
  * Description: Print lowercase alphabets backwards
  * Return: 0
  */
-int main (void)
+int main(void)
 {
 char d;
 
