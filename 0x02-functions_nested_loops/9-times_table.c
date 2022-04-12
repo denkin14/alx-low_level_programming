@@ -32,11 +32,12 @@ _putchar (' ');
 else
 {
 _putchar ((k /10) + '0');
-_putchar ((k % 10) + '0);
+_putchar ((k % 10) + '0');
+}
 if (m < 9)
 {
 _putchar(',');
-_putchar(' );
+_putchar(' ');
 }
 }
 }
