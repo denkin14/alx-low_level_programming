@@ -1,18 +1,26 @@
 #include "main.h"
 
-/** 
- * print_alphabetx10 - Print ten time the alphabet in lowercase  
+/**
+ * print_alphabet_x10 - print alphabet
+ *
+ * Return: Always 0.
  */
 void print_alphabet_x10(void)
 {
-char dennis;
-int kinyua;
+int alpha;
+int count;
 
-for (kinyua = 0; kinyua < 10; kinyua++)
+
+count = 0;
+while (count < 10)
 {
-for (dennis = 'a'; dennis <= 'z'; dennis++)
-_putchar(dennis);
+for (alpha = 'a' ; alpha <= 'z'; alpha++)
+{
+_putchar(alpha);
+}
 
+count++;
 _putchar('\n');
 }
+
 }
