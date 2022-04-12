@@ -28,7 +28,6 @@ if (m < 9)
 _putchar (',');
 _putchar (' ');
 }
-}
 else
 {
 _putchar ((k /10) + '0');
@@ -42,5 +41,4 @@ _putchar(' ');
 }
 }
 _putchar ('\n');
-}
 }
