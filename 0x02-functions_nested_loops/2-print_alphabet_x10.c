@@ -1,9 +1,7 @@
 #include "main.h"
 
 /** 
- * Description: print_alphabetx10 function uses _putchar fuction to print
- *
- * Return: 0 
+ * print_alphabetx10 - Print ten time the alphabet in lowercase  
  */
 void print_alphabet_x10(void)
 {
