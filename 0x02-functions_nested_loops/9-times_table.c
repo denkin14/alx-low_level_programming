@@ -14,6 +14,9 @@ for(d = 0; d <= 9; d++)
 {
 for(m = 0; m <= 9; m++)
 {
+k = d * m;
+if (( k / 10 == 0)
+{
 if (m == 0)
 {
 _putchar ('0');
@@ -30,7 +33,7 @@ _putchar (' ');
 }
 else
 {
-_putchar ((k /10) + '0');
+_putchar ((k / 10) + '0');
 _putchar ((k % 10) + '0');
 }
 if (m < 9)
