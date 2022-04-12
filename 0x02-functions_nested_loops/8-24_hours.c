@@ -12,7 +12,7 @@ int k;
 
 for (d = 0; d <= 23; d++)
 {
-for (k =0; k <= 59; b++)
+for (k =0; k <= 59; k++)
 {	
 _putchar (d / 10 + '0');
 _putchar (d % 10 + '0');
