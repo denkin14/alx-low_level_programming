@@ -1,18 +1,12 @@
-#include "main.h"
-/**
-* print_number - that prints an integer
-*@n
-* Return: Always 0.
-*/
-void print_number(int n)
-{
-int a = 98;
-int b = 402;
-int c = 1024;
-int d = 0;
-int e = -98;
-
-_putchar (a , b , c , d , e );
-}
-_putchar ('\n');
-}
+int _putchar(char c);
+int _isupper(int c);
+int _isdigit(int c);
+int mul(int a, int b);
+void print_numbers(void);
+void print_most_numbers(void);
+void more_numbers(void);
+void print_line(int n);
+void print_diagonal(int n);
+void print_square(int size);
+void print_triangle(int size);
+void print_number(int n);
