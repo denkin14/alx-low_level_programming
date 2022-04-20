@@ -32,7 +32,7 @@ void rev_string(char *s)
 	{
 	        d = *end_d;
 		*end_d = *start_d;
-		start_d = d;
+		*start_d = d;
 
 		start_d++;
 		end_d--;
