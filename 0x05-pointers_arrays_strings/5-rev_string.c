@@ -30,7 +30,7 @@ void rev_string(char *s)
 
 	for (i = 0; i < count / 2; i++)
 	{
-	        d = *end_d;
+		d = *end_d;
 		*end_d = *start_d;
 		*start_d = d;
 
