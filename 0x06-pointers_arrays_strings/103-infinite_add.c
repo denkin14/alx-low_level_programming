@@ -1,8 +1,8 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdio.h>
 
 /**
- * print_buffer - functuion tomprint buffer
+ * print_buffer - prints buffer
  * @b: buffer
  * @size: size
  * Return: void
@@ -10,34 +10,33 @@
 
 void print_buffer(char *b, int size)
 {
-	int d, m, k;
+	int o, j, i;
 
-	d = 0;
+	o = 0;
 
 	if (size <= 0)
 	{
 		printf("\n");
 		return;
 	}
-	while (d < size)
+	while (o < size)
 	{
-		m = size - d < 10 ? size - d : 10;
-		printf("%08x: ", d);
-		for (k = 0; k < 10; k++)
+		j = size - o < 10 ? size - o : 10;
+		printf("%08x: ", o);
+		for (i = 0; i < 10; i++)
 		{
-			if (k < m)
-				printf("%02x", *(b + d +k));
+			if (i < j)
+				printf("%02x", *(b + o + i));
 			else
-				printf(" ");
-			if (k % 2)
+				printf("  ");
+			if (i % 2)
 			{
 				printf(" ");
 			}
 		}
-
-		for (k = 0; k < m; k++)
+		for (i = 0; i < j; i++)
 		{
-			int c = *(b + d + k);
+			int c = *(b + o + i);
 
 			if (c < 32 || c > 132)
 			{
@@ -46,7 +45,6 @@ void print_buffer(char *b, int size)
 			printf("%c", c);
 		}
 		printf("\n");
-		d += 10;
+		o += 10;
 	}
 }
-
