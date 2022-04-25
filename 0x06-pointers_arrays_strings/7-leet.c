@@ -11,7 +11,7 @@ char *leet(char *n)
 	int get[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
 	int change[] = {'4', '3', '0', '7', '1'};
 
-	for (d= 0; n[d] != '\0'; d++)
+	for (d = 0; n[d] != '\0'; d++)
 	{
 		for (k = 0; k <= 9; k++)
 		{
