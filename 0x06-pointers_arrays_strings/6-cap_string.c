@@ -13,11 +13,11 @@ char *cap_string(char *str)
 
 	for (d = 0, capital = 0; str[d] != '\0'; d++)
 	{
-		if (str[0] > 96 && str [0] <123)
+		if (str[0] > 96 && str[0] < 123)
 		capital = 1;
 		for (m = 0; signs[m] != '\0'; m++)
 		{
-			if (signs[m] == str [d])
+			if (signs[m] == str[d])
 				capital = 1;
 		}
 
