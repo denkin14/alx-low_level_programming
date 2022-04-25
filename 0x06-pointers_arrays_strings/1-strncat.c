@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - fuction to concatenate two strings
+ * _strcat - fuction to concatenate two strings
  * @dest: pointer destination
  * @src: pointer source
  * @n: bytes to be used from src
@@ -25,6 +25,5 @@ char *_strncpy(char *dest, char *src, int n)
 		d++;
 	}
 	dest[m] = '\0';
-	
 	return (dest);
 }
