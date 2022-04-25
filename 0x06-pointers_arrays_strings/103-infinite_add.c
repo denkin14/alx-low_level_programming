@@ -37,7 +37,7 @@ void print_buffer(char *b, int size)
 
 		for (k = 0; k < m; k++)
 		{
-			int c =*(b + d + k);
+			int c = *(b + d + k);
 
 			if (c < 32 || c > 132)
 			{
