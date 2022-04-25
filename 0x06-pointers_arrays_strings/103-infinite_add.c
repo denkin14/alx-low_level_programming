@@ -1,8 +1,8 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
- * print_buffer - prints buffer
+ * print_buffer - function that prints buffer
  * @b: buffer
  * @size: size
  * Return: void
