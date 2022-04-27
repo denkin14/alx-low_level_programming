@@ -1,28 +1,44 @@
-include "main.h"
-/**
- * _strspn - gets the length of a prefix substring
- * @s: string
- * @accept: substring
- * Return: returns usigned values
- */
-unsigned int _strspn(char *s, char *accept)
-{
-	int d;
-	int j;
-	unsigned int result = 0;
+#include "main.h"
 
-	for (d = 0; [d] != '\0'; d++)
+/**
+ * _strspn - Locates a character in a string
+ * @s: main C string to be scanned.
+ * @accept: string containing the list of characters to match in s
+ * Return: return count
+ **/
+
+unsigned int _strspn(char *s, char *accept)
+
+{
+	int i, j;
+	int count = 0;
+	char *str1, *str2;
+
+	str1 = s;
+	str2 = accept;
+
+	i = 0;
+	while (str1[i] != '\0') /*Declaring WHILE *s */
 	{
-		for (j = 0; s[j] != '\0'; j++)
+		j = 0;
+		while (str2[j] != '\0') /*Declaring WHILE *accept*/
 		{
-			if (s[d] == accept[j])
+			if (str2[j] == str1[i]) /*Evaluate condition*/
 			{
-				result++;
+				count++; /*count number*/
 				break;
 			}
+
+			j++;    /*add j+1*/
 		}
-		if (s[j] == '\0')
-			return (result);
+
+		if (s[i] != accept[j]) /*If aren't equals*/
+		{
+			break;
+		}
+
+		i++; /*add x+1*/
 	}
-	return (result);
+
+	return (count); /*return the value of count*/
 }
