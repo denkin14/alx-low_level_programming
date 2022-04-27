@@ -1,17 +1,33 @@
-include "main.h"
+#include "main.h"
 #include <stdio.h>
+
 /**
- * print_diagsums - function thst prints diagonal summaries
- * @a: array
- * @size: size of diagonal
+ * print_diagsums - sum ofe two diagonals of square matrix of integers
+ * @a: 2d array of chars
+ * @size: number matrix
+ * Return: void
  */
+
 void print_diagsums(int *a, int size)
 {
-	int ini, dia1 = 0, dia2 = 0;
+	/*Declaring variables*/
+	int i;
+	int sum1, sum2;
 
-	for (ini = 0; ini < size * size; ini += (size + 1))
-		dia1 += a[ini];
-	for (ini = size - 1; ini < (size * size) - (size - 1); ini += (size - 1))
-		dia2 += a[ini];
-	printf("%d, %d\n", dia1, dia2);
+	sum1 = 0;
+	sum2 = 0;
+
+	i = 0;
+	while (i < size) /*number repetitions*/
+	{
+		/*sums for diagsums*/
+		sum1 = sum1 + *(a + i * size + i);
+		sum2 = sum2 + *(a + i * size + size - i - 1);
+
+		i++; /*add +1*/
+	}
+
+	printf("%i, %i\n", sum1, sum2);
+
 }
+
