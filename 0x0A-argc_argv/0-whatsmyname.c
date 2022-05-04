@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - will Print number of arguments passed to it.
@@ -6,7 +7,6 @@
  * @argv: array of pointers 
  * Return: Always 0 (Success)
  */
-
 int main(int argc, char *argv[])
 {
 (void) argc;
