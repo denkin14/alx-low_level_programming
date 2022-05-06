@@ -27,4 +27,41 @@ void ch_free_grid(char **grid, unsigned int height)
  */
 char **strtow(char *str)
 {
-}
+	char **panda;
+	unsigned int d, height, m, k, b1;
+
+	if (str == NULL || *str =='\0')
+		return (NULL);
+	for (d = height = 0; str[d] != '\0'; d++)
+		if (str[d] != ' ' && (str[d + 1] == ' ' || str[d + 1] == '\0'))
+			height++;
+	panda = malloc(height + 1) * sizeof(char *);
+	if (panda == NULL || height == 0)
+	{
+		free(panda);
+		return (NULL);
+	}
+	for (m = b1 = 0; m < height; m++)
+	{
+		for (d = b1; str[d] != '\0'; d++)
+		{
+			if (str[d] == ' ')
+				b1++;
+			if (str[d] != ' ' && (str[d + 1] == ' ' || str[d + 1] == '\0'))
+			{
+				panda[m] = malloc((d - b1 + 2) * sizeof(char));
+				if (panda[m] == NULL)
+				{
+					ch_free_grid(panda, m);
+					return (NULL);
+				}
+				break;
+			}
+		}
+		for (k = 0; b1 <= d; b1++, k++)
+			panda[m][k] = str[b1];
+		panda[m][k] = '\0';
+	}
+	panda[m] = NULL;
+	return (panda);
+}	
