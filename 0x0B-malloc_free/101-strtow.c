@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * ch_free_grid - will free a 2 dimensional array
- * @grid: our multidimensional array of character
- * @height: height of the array
+ * ch_free_grid - frees a 2 dimensional array.
+ * @grid: multidimensional array of char.
+ * @height: height of the array.
  *
  * Return: no return
  */
@@ -20,48 +20,48 @@ void ch_free_grid(char **grid, unsigned int height)
 }
 
 /**
- * strtow - Will split string into words
- * @str: the string
+ * strtow - splits a string into words.
+ * @str: string.
  *
- * Return: The pointer of an array of integers
+ * Return: pointer of an array of integers
  */
 char **strtow(char *str)
 {
-	char **panda;
-	unsigned int d, height, m, k, b1;
+	char **aout;
+	unsigned int c, height, i, j, a1;
 
-	if (str == NULL || *str =='\0')
+	if (str == NULL || *str == '\0')
 		return (NULL);
-	for (d = height = 0; str[d] != '\0'; d++)
-		if (str[d] != ' ' && (str[d + 1] == ' ' || str[d + 1] == '\0'))
+	for (c = height = 0; str[c] != '\0'; c++)
+		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			height++;
-	panda = malloc(height + 1) * sizeof(char *);
-	if (panda == NULL || height == 0)
+	aout = malloc((height + 1) * sizeof(char *));
+	if (aout == NULL || height == 0)
 	{
-		free(panda);
+		free(aout);
 		return (NULL);
 	}
-	for (m = b1 = 0; m < height; m++)
+	for (i = a1 = 0; i < height; i++)
 	{
-		for (d = b1; str[d] != '\0'; d++)
+		for (c = a1; str[c] != '\0'; c++)
 		{
-			if (str[d] == ' ')
-				b1++;
-			if (str[d] != ' ' && (str[d + 1] == ' ' || str[d + 1] == '\0'))
+			if (str[c] == ' ')
+				a1++;
+			if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 			{
-				panda[m] = malloc((d - b1 + 2) * sizeof(char));
-				if (panda[m] == NULL)
+				aout[i] = malloc((c - a1 + 2) * sizeof(char));
+				if (aout[i] == NULL)
 				{
-					ch_free_grid(panda, m);
+					ch_free_grid(aout, i);
 					return (NULL);
 				}
 				break;
 			}
 		}
-		for (k = 0; b1 <= d; b1++, k++)
-			panda[m][k] = str[b1];
-		panda[m][k] = '\0';
+		for (j = 0; a1 <= c; a1++, j++)
+			aout[i][j] = str[a1];
+		aout[i][j] = '\0';
 	}
-	panda[m] = NULL;
-	return (panda);
-}	
+	aout[i] = NULL;
+	return (aout);
+}
