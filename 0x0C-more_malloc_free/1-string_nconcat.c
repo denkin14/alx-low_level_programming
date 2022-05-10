@@ -24,7 +24,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		;
 
 	if (n > d2)
-		n =d2;
+		n = d2;
 
 	dkin = d1 + n;
 
