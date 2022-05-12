@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * free_dog: will free dogs
- * @d:Struct Dog
+ * free_do -  will free dogs allovcated memory
+ * @d: struct dog
  *
  * Return: no return
  */
