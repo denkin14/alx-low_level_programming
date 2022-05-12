@@ -1,11 +1,10 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
  * free_do -  will free dogs allovcated memory
  * @d: struct dog
  *
- * Return: no return
  */
 
 void free_dog(dog_t *d)
