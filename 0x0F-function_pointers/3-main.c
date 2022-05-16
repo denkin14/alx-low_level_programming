@@ -11,7 +11,7 @@
 
 int main(int argc, char *argv[])
 {
-	int R;
+	int d;
 
 	if (argc != 4)
 	{
@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	R = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
-	printf("%d\n", R);
+	d = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", d);
 
 	return (0);
 }
