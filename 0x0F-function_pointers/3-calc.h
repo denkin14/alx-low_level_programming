@@ -1,10 +1,11 @@
 #ifndef CALC_H
-#define CALC_H_
+#define CALC_H
 
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
- * struct op - Struct op
+ * struct op - struct op
  *
  * @op: operator
  * @f: function
