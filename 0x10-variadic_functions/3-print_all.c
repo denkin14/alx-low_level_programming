@@ -12,10 +12,10 @@
 void print_all(const char * const format, ...)
 {
 	unsigned int d;
-	va_list args;
+	va_list myargs;
 	char *s, *separator;
 
-	va_start(args, format);
+	va_start(myargs, format);
 
 	separator = "";
 
@@ -25,16 +25,16 @@ void print_all(const char * const format, ...)
 		switch (format[d])
 		{
 			case 'c':
-				printf("%s%c", separator,  va_arg(args, int));
+				printf("%s%c", separator,  va_arg(myargs, int));
 				break;
 			case 'i':
-				printf("%s%d", separator, va_arg(args, int));
+				printf("%s%d", separator, va_arg(myargs, int));
 				break;
 			case 'f':
-				printf("%s%f", separator, va_arg(args, double));
+				printf("%s%f", separator, va_arg(myargs, double));
 				break;
 			case 's':
-				s = va_arg(args, char *);
+				s = va_arg(myargs, char *);
 				if (s == NULL)
 					s = "(nil)";
 				printf("%s%s", separator, s);
@@ -48,5 +48,5 @@ void print_all(const char * const format, ...)
 	}
 
 	printf("\n");
-	va_end(args);
+	va_end(myargs);
 }
