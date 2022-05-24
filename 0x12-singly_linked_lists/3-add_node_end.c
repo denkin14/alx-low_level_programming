@@ -1,19 +1,19 @@
 #include "lists.h"
 /**
-  *_strlen - returns length of string.
-  *@str: string;
+  *_strlen - will return length of string.
+  *@str: the string
   *
-  *Return: length of string.
+  *Return: the length of string.
   */
 int _strlen(const char *str)
 {
-	int i;
+	int d;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
+	d = 0;
+	while (str[d] != '\0')
+		d++;
 
-	return (i);
+	return (d);
 
 }
 /**
